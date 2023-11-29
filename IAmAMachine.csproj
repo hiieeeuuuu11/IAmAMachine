@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16097512-502C-4944-825C-036B9B5BFE4A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IAmAMachine</RootNamespace>
+    <AssemblyName>IAmAMachine</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HoSoNhanVien\HoSoNhanVienUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HoSoNhanVien\HoSoNhanVienUserControl.Designer.cs">
+      <DependentUpon>HoSoNhanVienUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\DangNhapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\DangNhapForm.Designer.cs">
+      <DependentUpon>DangNhapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\KichHoatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\KichHoatForm.Designer.cs">
+      <DependentUpon>KichHoatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCacDanhMuc\QuanLyKhachHangUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyCacDanhMuc\QuanLyKhachHangUserControl.Designer.cs">
+      <DependentUpon>QuanLyKhachHangUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCacDanhMuc\QuanLyNhanVienUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyCacDanhMuc\QuanLyNhanVienUserControl.Designer.cs">
+      <DependentUpon>QuanLyNhanVienUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyCacDanhMuc\QuanLyLoaiThuocUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyCacDanhMuc\QuanLyLoaiThuocUserControl.Designer.cs">
+      <DependentUpon>QuanLyLoaiThuocUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKho\NhapThuocVaoKhoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyKho\NhapThuocVaoKhoUserControl.Designer.cs">
+      <DependentUpon>NhapThuocVaoKhoUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKho\QuanLyHoaDonNhapUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyKho\QuanLyHoaDonNhapUserControl.Designer.cs">
+      <DependentUpon>QuanLyHoaDonNhapUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKho\QuanLyHanSuDungUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyKho\QuanLyHanSuDungUserControl.Designer.cs">
+      <DependentUpon>QuanLyHanSuDungUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThuocBan\QuanLyHoaDonBanUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyThuocBan\QuanLyHoaDonBanUserControl.Designer.cs">
+      <DependentUpon>QuanLyHoaDonBanUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyThuocBan\InHoaDonBanUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLyThuocBan\InHoaDonBanUserControl.Designer.cs">
+      <DependentUpon>InHoaDonBanUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ThongKe\ThongKeLoiNhuanUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThongKe\ThongKeLoiNhuanUserControl.Designer.cs">
+      <DependentUpon>ThongKeLoiNhuanUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKe\XepHangNhanVienUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThongKe\XepHangNhanVienUserControl.Designer.cs">
+      <DependentUpon>XepHangNhanVienUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LichSuHoatDong\LichSuHoatDongUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LichSuHoatDong\LichSuHoatDongUserControl.Designer.cs">
+      <DependentUpon>LichSuHoatDongUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongTinCuaHang\ThongTinCuaHangUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThongTinCuaHang\ThongTinCuaHangUserControl.Designer.cs">
+      <DependentUpon>ThongTinCuaHangUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityClasses\DatabaseAccess.cs" />
+    <Compile Include="UtilityClasses\MD5.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtilityClasses\SecureRandom.cs" />
+    <Compile Include="UtilityClasses\SMTP.cs" />
+    <Compile Include="MainForms\TrangChuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\TrangChuForm.Designer.cs">
+      <DependentUpon>TrangChuForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="HoSoNhanVien\HoSoNhanVienUserControl.resx">
+      <DependentUpon>HoSoNhanVienUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LichSuHoatDong\LichSuHoatDongUserControl.resx">
+      <DependentUpon>LichSuHoatDongUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\DangNhapForm.resx">
+      <DependentUpon>DangNhapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\KichHoatForm.resx">
+      <DependentUpon>KichHoatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuanLyCacDanhMuc\QuanLyKhachHangUserControl.resx">
+      <DependentUpon>QuanLyKhachHangUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCacDanhMuc\QuanLyLoaiThuocUserControl.resx">
+      <DependentUpon>QuanLyLoaiThuocUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyCacDanhMuc\QuanLyNhanVienUserControl.resx">
+      <DependentUpon>QuanLyNhanVienUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\TrangChuForm.resx">
+      <DependentUpon>TrangChuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyKho\NhapThuocVaoKhoUserControl.resx">
+      <DependentUpon>NhapThuocVaoKhoUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyKho\QuanLyHoaDonNhapUserControl.resx">
+      <DependentUpon>QuanLyHoaDonNhapUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyKho\QuanLyHanSuDungUserControl.resx">
+      <DependentUpon>QuanLyHanSuDungUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThuocBan\InHoaDonBanUserControl.resx">
+      <DependentUpon>InHoaDonBanUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyThuocBan\QuanLyHoaDonBanUserControl.resx">
+      <DependentUpon>QuanLyHoaDonBanUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe\ThongKeLoiNhuanUserControl.resx">
+      <DependentUpon>ThongKeLoiNhuanUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe\XepHangNhanVienUserControl.resx">
+      <DependentUpon>XepHangNhanVienUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinCuaHang\ThongTinCuaHangUserControl.resx">
+      <DependentUpon>ThongTinCuaHangUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\32bit_medicine.png" />
+    <Content Include="Resources\64bit_medicine.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\category_24px.png" />
+    <None Include="Resources\emp_24px.png" />
+    <None Include="Resources\exit_24px.png" />
+    <None Include="Resources\circle_16px.png" />
+    <Content Include="Resources\green_calender.png" />
+    <Content Include="Resources\green_hide.png" />
+    <Content Include="Resources\green_padlock.png" />
+    <Content Include="Resources\green_store_128.ico" />
+    <Content Include="Resources\green_store_128.png" />
+    <Content Include="Resources\green_store_64.ico" />
+    <Content Include="Resources\green_store_64.png" />
+    <Content Include="Resources\green_view.png" />
+    <None Include="Resources\history_24px.png" />
+    <Content Include="Resources\hulk.bmp" />
+    <Content Include="Resources\hulk.png" />
+    <None Include="Resources\sell_24px.png" />
+    <None Include="Resources\storage_24px.png" />
+    <None Include="Resources\statistic_24px.png" />
+    <None Include="Resources\user_24px.png" />
+    <None Include="Resources\manual_24px.png" />
+    <None Include="Resources\manual_white_24px.png" />
+    <Content Include="Resources\search_24px.png" />
+    <None Include="Resources\store_24px.png" />
+    <Content Include="Resources\white_medicine.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
